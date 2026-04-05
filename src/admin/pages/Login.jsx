@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { DoctorContext } from '../context/DoctorContext'
 import { AdminContext } from '../context/AdminContext'
 import { showError, showSuccess } from '../utils/adminToast'
+import { BACKENDURL } from '../../lib'
 import './Login.css'
 
 const Login = () => {
@@ -41,7 +42,7 @@ const Login = () => {
 
     try {
 
-      const res = await fetch("http://localhost:8080/api/auth/login", {
+      const res = await fetch(`${BACKENDURL}auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

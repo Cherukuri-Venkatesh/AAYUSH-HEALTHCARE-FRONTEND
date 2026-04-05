@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import { clearTokens } from "../utils/auth";
 import { apiGet, apiPut } from "../utils/api";
 import { showError, showSuccess } from '../utils/doctorToast';
+import { BACKENDURL } from '../../lib';
 
 
 export const DoctorContext = createContext()
@@ -91,8 +92,8 @@ const DoctorContextProvider = (props) => {
 
             const token = localStorage.getItem('dToken');
             const url = type === 'labreport'
-                ? 'http://localhost:8080/api/labreports/upload'
-                : 'http://localhost:8080/api/prescriptions/upload';
+                ? `${BACKENDURL}labreports/upload`
+                : `${BACKENDURL}prescriptions/upload`;
 
             const response = await fetch(url, {
                 method: 'POST',

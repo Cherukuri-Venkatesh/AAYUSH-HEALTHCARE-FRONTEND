@@ -1,5 +1,6 @@
 // Backend Base URL
-export const BACKENDURL = "https://aayush-healthcare-backend.onrender.com/api/";
+const envBackendUrl = (import.meta.env.VITE_BACKEND_URL || "https://aayush-healthcare-backend.onrender.com").replace(/\/+$/, "");
+export const BACKENDURL = envBackendUrl.endsWith("/api") ? `${envBackendUrl}/` : `${envBackendUrl}/api/`;
 export function callApi(reqMethod, url, data, responseHandler)
 {
     let options;
