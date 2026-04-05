@@ -1,0 +1,15 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

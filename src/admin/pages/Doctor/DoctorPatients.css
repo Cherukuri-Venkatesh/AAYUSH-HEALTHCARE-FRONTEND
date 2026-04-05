@@ -1,0 +1,95 @@
+.doctor-patients-page {
+  min-height: 100%;
+  background: linear-gradient(135deg, #f9fcfd 0%, #f0f7fb 28%, #e6f2f9 52%, #ddf0f7 78%, #d9eef6 100%);
+  padding: 2rem 1.35rem;
+}
+
+.doctor-patients-header h1 {
+  margin: 0;
+  color: #143c5d;
+  font-size: 1.85rem;
+  font-weight: 800;
+}
+
+.doctor-patients-header p {
+  margin-top: 0.4rem;
+  color: #4a6b82;
+  font-size: 0.95rem;
+}
+
+.doctor-patients-filter-card,
+.doctor-patients-table-card {
+  margin-top: 1rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(18, 53, 92, 0.1);
+  padding: 1rem;
+}
+
+.doctor-patients-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem;
+}
+
+.doctor-patients-filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.doctor-patients-filter-item.search-item {
+  grid-column: span 2;
+}
+
+.doctor-patients-filter-item label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #264e6e;
+}
+
+.doctor-patients-filter-item input,
+.doctor-patients-filter-item select {
+  width: 100%;
+  border: 1px solid #cadeee;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.86rem;
+  color: #2c5676;
+  background: #fff;
+}
+
+.doctor-patients-filter-item input:focus,
+.doctor-patients-filter-item select:focus {
+  outline: none;
+  border-color: #1f9dcb;
+  box-shadow: 0 0 0 3px rgba(31, 157, 203, 0.14);
+}
+
+.doctor-patient-table th,
+.doctor-patient-table td {
+  white-space: nowrap;
+}
+
+.doctor-patient-empty-cell {
+  text-align: center;
+  color: #5d7c93;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+@media (max-width: 992px) {
+  .doctor-patients-filter-item.search-item {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-patients-page {
+    padding: 1.35rem 0.85rem;
+  }
+
+  .doctor-patients-header h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,187 @@
+/* ============================================
+   HOSPITALS SECTION STYLING
+   Premium Hospital Cards & Components
+   ============================================ */
+
+.hospital-card-enhanced {
+  border-radius: 14px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hospital-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #5F6FFF, #8B9FFF);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.hospital-card-enhanced:hover::before {
+  transform: scaleX(1);
+}
+
+.hospital-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hospital-header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.hospital-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  border-left: 3px solid #5F6FFF;
+  padding-left: 12px;
+}
+
+.info-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* All Hospitals Page */
+.hospitals-page-header {
+  background: linear-gradient(135deg, #5F6FFF 0%, #8B9FFF 100%);
+  color: white;
+  padding: 60px 0;
+  margin-bottom: 40px;
+  border-radius: 0;
+}
+
+.hospitals-page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.hospitals-page-header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.hospitals-grid-container {
+  padding: 40px 0;
+}
+
+.hospitals-filter-section {
+  background: #f8f9ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.hospitals-filter-section .form-control,
+.hospitals-filter-section .form-select {
+  height: 44px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+/* Hospital type badges */
+.hospital-type-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.type-multispeciality {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.type-cardiac {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.type-women {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.type-surgical {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.type-diagnostic {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.type-wellness {
+  background: #e0f2f1;
+  color: #00796b;
+}
+
+.type-orthopedic {
+  background: #f1f8e9;
+  color: #558b2f;
+}
+
+/* Animations */
+@keyframes hospitalCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hospital-card-enhanced {
+  animation: hospitalCardIn 0.6s ease-out;
+}
+
+.hospital-card-enhanced:nth-child(1) { animation-delay: 0.1s; }
+.hospital-card-enhanced:nth-child(2) { animation-delay: 0.2s; }
+.hospital-card-enhanced:nth-child(3) { animation-delay: 0.3s; }
+.hospital-card-enhanced:nth-child(4) { animation-delay: 0.4s; }
+.hospital-card-enhanced:nth-child(5) { animation-delay: 0.5s; }
+.hospital-card-enhanced:nth-child(6) { animation-delay: 0.6s; }
+.hospital-card-enhanced:nth-child(7) { animation-delay: 0.7s; }
+.hospital-card-enhanced:nth-child(8) { animation-delay: 0.8s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hospitals-page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .hospital-header {
+    flex-direction: column;
+  }
+}

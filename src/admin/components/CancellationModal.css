@@ -1,0 +1,87 @@
+.doctor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 28, 45, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.doctor-modal-card {
+  width: min(460px, 100%);
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 48px rgba(19, 47, 81, 0.25);
+  padding: 1.25rem;
+}
+
+.doctor-modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f2f4d;
+}
+
+.doctor-modal-label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f4f73;
+}
+
+.doctor-modal-select,
+.doctor-modal-textarea {
+  width: 100%;
+  border: 1px solid #cdddeb;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.doctor-modal-select:focus,
+.doctor-modal-textarea:focus {
+  outline: none;
+  border-color: #1f9dcb;
+  box-shadow: 0 0 0 3px rgba(31, 157, 203, 0.12);
+}
+
+.doctor-modal-textarea {
+  margin-top: 0.75rem;
+  resize: vertical;
+}
+
+.doctor-modal-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+
+.doctor-modal-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.doctor-modal-btn-secondary {
+  background: #eef5fb;
+  color: #245072;
+}
+
+.doctor-modal-btn-primary {
+  background: linear-gradient(135deg, #1f9dcb 0%, #2189f0 100%);
+  color: #fff;
+}
+
+.doctor-modal-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

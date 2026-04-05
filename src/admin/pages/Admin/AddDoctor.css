@@ -1,0 +1,301 @@
+/* ============================================
+   ADD DOCTOR PAGE STYLING
+   ============================================ */
+
+.add-doctor-form {
+  padding: 24px 20px;
+  width: 100%;
+  max-width: 100%;
+  background: #eef4fa;
+}
+
+.add-doctor-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #18466f;
+}
+
+.add-doctor-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .add-doctor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.doctor-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  border: 1px solid #d8e6f2;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 22px rgba(18, 67, 107, 0.08);
+}
+
+.doctor-photo-input {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #d7e4ef;
+}
+
+.doctor-photo-label {
+  font-size: 14px;
+  color: #2068a0;
+  cursor: pointer;
+  border: 1px solid #c7d9ea;
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.doctor-photo-label:hover {
+  background: #f2f8fd;
+}
+
+.doctor-photo-info {
+  color: #5a7388;
+  font-size: 13px;
+}
+
+#doc-img {
+  display: none;
+}
+
+.doctor-form-fields {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #d8e6f2;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(18, 67, 107, 0.08);
+}
+
+@media (min-width: 768px) {
+  .doctor-form-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.doctor-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.doctor-form-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #244d71;
+}
+
+.doctor-form-label span {
+  color: #e11d48;
+}
+
+.doctor-form-input,
+.doctor-form-select,
+.doctor-form-textarea {
+  width: 100%;
+  border: 1px solid #cadbeb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  background: #f9fcff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-form-input:focus,
+.doctor-form-select:focus,
+.doctor-form-textarea:focus {
+  border-color: #2092d3;
+  box-shadow: 0 0 0 3px rgba(32, 146, 211, 0.16);
+}
+
+.doctor-about-section {
+  margin-top: 14px;
+  background-color: #fff;
+  border: 1px solid #d8e6f2;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(18, 67, 107, 0.08);
+}
+
+.doctor-form-textarea {
+  width: 100%;
+  margin-top: 8px;
+  min-height: 120px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.add-doctor-button-section {
+  margin-top: 14px;
+  text-align: right;
+}
+
+.add-doctor-submit-btn {
+  background: linear-gradient(135deg, #1f9dcb 0%, #2a68db 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.add-doctor-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(22, 93, 157, 0.22);
+}
+
+.add-doctor-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Image Cropper Modal */
+.cropper-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.cropper-modal {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  width: 100%;
+  max-width: 896px;
+}
+
+.cropper-container {
+  position: relative;
+  width: 100%;
+  height: 384px;
+  background-color: #111827;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cropper-controls {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cropper-zoom-section {
+  flex: 1;
+}
+
+.cropper-zoom-label {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.cropper-zoom-slider {
+  width: 100%;
+}
+
+.cropper-button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.cropper-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  background-color: transparent;
+  color: #374151;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.cropper-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.cropper-btn-confirm {
+  background-color: #2a68db;
+  color: white;
+  border-color: #2a68db;
+}
+
+.cropper-btn-confirm:hover {
+  background-color: #1f55ba;
+}
+
+@media (max-width: 768px) {
+  .add-doctor-form {
+    padding: 16px 12px;
+  }
+
+  .add-doctor-button-section {
+    text-align: left;
+  }
+
+  .add-doctor-submit-btn {
+    width: 100%;
+  }
+
+  .cropper-container {
+    height: 280px;
+  }
+
+  .cropper-controls {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .cropper-button-group {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .cropper-button-group {
+    justify-content: stretch;
+  }
+
+  .cropper-btn {
+    flex: 1;
+    text-align: center;
+  }
+}

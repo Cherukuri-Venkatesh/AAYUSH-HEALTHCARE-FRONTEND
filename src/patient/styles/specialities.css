@@ -1,0 +1,126 @@
+/* ============================================
+   SPECIALITIES SECTION STYLING
+   Premium Card Design with Glow Effects
+   ============================================ */
+
+.speciality-section-premium {
+  padding: 20px 0;
+}
+
+.speciality-card {
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.speciality-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #5F6FFF 0%, #8B9FFF 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.speciality-card:hover::before {
+  opacity: 0.02;
+}
+
+.speciality-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0f3ff, #f8faff);
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  border: 1px solid #e8ecff;
+}
+
+.speciality-card:hover .speciality-icon-container {
+  background: linear-gradient(135deg, #5F6FFF, #8B9FFF);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(95, 111, 255, 0.2);
+}
+
+.speciality-icon {
+  font-size: 28px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.speciality-card:hover .speciality-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.speciality-name {
+  font-size: 0.95rem;
+  color: #2d3dbf;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+}
+
+.speciality-card:hover .speciality-name {
+  color: #5F6FFF;
+  font-size: 0.98rem;
+}
+
+/* Animation staggering */
+@keyframes specialityCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.speciality-card {
+  animation: specialityCardIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.col-lg-4 .speciality-card:nth-child(1) { animation-delay: 0.05s; }
+.col-lg-4 .speciality-card:nth-child(2) { animation-delay: 0.1s; }
+.col-lg-4 .speciality-card:nth-child(3) { animation-delay: 0.15s; }
+.col-lg-4 .speciality-card:nth-child(4) { animation-delay: 0.2s; }
+.col-lg-4 .speciality-card:nth-child(5) { animation-delay: 0.25s; }
+.col-lg-4 .speciality-card:nth-child(6) { animation-delay: 0.3s; }
+.col-lg-4 .speciality-card:nth-child(7) { animation-delay: 0.35s; }
+.col-lg-4 .speciality-card:nth-child(8) { animation-delay: 0.4s; }
+.col-lg-4 .speciality-card:nth-child(9) { animation-delay: 0.45s; }
+.col-lg-4 .speciality-card:nth-child(10) { animation-delay: 0.5s; }
+.col-lg-4 .speciality-card:nth-child(11) { animation-delay: 0.55s; }
+.col-lg-4 .speciality-card:nth-child(12) { animation-delay: 0.6s; }
+.col-lg-4 .speciality-card:nth-child(13) { animation-delay: 0.65s; }
+.col-lg-4 .speciality-card:nth-child(14) { animation-delay: 0.7s; }
+.col-lg-4 .speciality-card:nth-child(15) { animation-delay: 0.75s; }
+.col-lg-4 .speciality-card:nth-child(16) { animation-delay: 0.8s; }
+.col-lg-4 .speciality-card:nth-child(17) { animation-delay: 0.85s; }
+.col-lg-4 .speciality-card:nth-child(18) { animation-delay: 0.9s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .speciality-icon-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .speciality-icon {
+    font-size: 24px;
+  }
+
+  .speciality-name {
+    font-size: 0.88rem;
+  }
+}

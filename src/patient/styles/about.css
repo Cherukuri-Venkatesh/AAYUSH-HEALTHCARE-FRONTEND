@@ -1,0 +1,204 @@
+/* ============================================
+   ABOUT PAGE STYLING
+   Premium Layout with Animations
+   ============================================ */
+
+.about-page {
+  background: white;
+}
+
+.about-hero {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 8px 20px rgba(95, 111, 255, 0.15);
+}
+
+.about-hero h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -1px;
+}
+
+/* Section Styling */
+.about-section,
+.mission-vision-grid,
+.our-services,
+.why-choose-us,
+.our-technology,
+.statistics,
+.final-cta {
+  animation: fadeInUp 0.7s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Box Styling */
+.about-image-box,
+.tech-image-box {
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(95, 111, 255, 0.1);
+}
+
+.about-image-box:hover,
+.tech-image-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(95, 111, 255, 0.2);
+}
+
+/* Mission Vision Cards */
+.mission-vision-card {
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #f0f0f0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(95, 111, 255, 0.15);
+}
+
+.mission-vision-card .icon-box {
+  font-size: 48px;
+  transition: transform 0.3s ease;
+}
+
+.mission-vision-card:hover .icon-box {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Service Cards */
+.service-card {
+  border: 1px solid #f0f0f0 !important;
+  border-radius: 12px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(95, 111, 255, 0.15);
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Stats Card */
+.stat-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e8ecff !important;
+  border-radius: 12px !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(95, 111, 255, 0.15);
+}
+
+/* Final CTA */
+.final-cta {
+  box-shadow: 0 12px 30px rgba(95, 111, 255, 0.2);
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final-cta .btn {
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.final-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Title */
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 30px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #5F6FFF, #8B9FFF);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+  width: 100%;
+}
+
+/* Benefits List */
+.why-choose-us strong {
+  color: #5F6FFF;
+  transition: color 0.3s ease;
+}
+
+.why-choose-us > div:hover strong {
+  color: #8B9FFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 50px 0 !important;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-image-box,
+  .tech-image-box {
+    padding: 30px !important;
+  }
+
+  .about-image-box div,
+  .tech-image-box div {
+    font-size: 60px !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

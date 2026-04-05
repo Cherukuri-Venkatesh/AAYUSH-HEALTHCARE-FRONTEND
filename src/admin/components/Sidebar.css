@@ -1,0 +1,107 @@
+/* ============================================
+   ADMIN SIDEBAR STYLING
+   ============================================ */
+
+.admin-sidebar {
+  min-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
+  width: 240px;
+  background: linear-gradient(to bottom, #FFF4E6, #FFFFFF);
+  border-right: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-sidebar-header {
+  padding: 24px 0;
+  text-align: center;
+  border-bottom: 1px solid #fed7aa;
+  background: linear-gradient(to right, #fed7aa, #fef3c7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b45309;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.admin-sidebar-menu {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #374151;
+  list-style: none;
+  margin: 0;
+}
+
+.admin-sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-sidebar-menu-item:hover {
+  background-color: #ffe4bd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-sidebar-menu-item.active {
+  background-color: #fed7aa;
+  color: #92400e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #fef3c7;
+  border: 1px solid #fed7aa;
+}
+
+.admin-sidebar-icon-wrapper img {
+  width: 20px;
+  height: 20px;
+}
+
+.admin-sidebar-menu-item.active .admin-sidebar-icon-wrapper {
+  background-color: #fed7aa;
+  border-color: #f59e0b;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    min-height: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 20;
+    overflow-y: auto;
+  }
+
+  .admin-sidebar.is-open {
+    transform: translateX(0);
+  }
+}

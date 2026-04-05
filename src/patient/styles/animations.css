@@ -1,0 +1,517 @@
+/* ============================================
+   GLOBAL ANIMATIONS & MICRO-INTERACTIONS
+   World-Class Healthcare Platform Design
+   ============================================ */
+
+/* ==========================
+   TRANSITION UTILITIES
+   ========================== */
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+/* ==========================
+   ELEVATION & SHADOW EFFECTS
+   ========================== */
+
+/* Shadow elevation system */
+.shadow-elevation-1 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-elevation-2 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-elevation-3 {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-elevation-4 {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.shadow-elevation-5 {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Premium hover elevation */
+.card-hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   BUTTON ANIMATIONS
+   ========================== */
+
+/* Button base styles */
+.btn {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Button press effect (ripple) */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+}
+
+.btn:active::before {
+  transform: scale(2.5);
+}
+
+/* Button hover enhancement */
+.btn-primary,
+.btn-outline-primary {
+  position: relative;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(95, 111, 255, 0.3);
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(95, 111, 255, 0.25);
+}
+
+.btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-lg {
+  font-size: 1.125rem;
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+/* ==========================
+   CARD ANIMATIONS
+   ========================== */
+
+/* Premium card hover lift */
+.card {
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-premium {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-premium:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+/* Appointment cards */
+.appointment-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-left: 4px solid #5F6FFF;
+}
+
+/* Doctor cards */
+.doctor-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-card:hover .doctor-image {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   TEXT & HEADING ANIMATIONS
+   ========================== */
+
+/* Fade in on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Section titles with elegant underline */
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #5F6FFF, #8B9FFF);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+  width: 100%;
+}
+
+/* ==========================
+   INPUT & FORM ANIMATIONS
+   ========================== */
+
+/* Form control focus glow */
+.form-control,
+.form-select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #5F6FFF;
+  box-shadow: 0 0 0 0.2rem rgba(95, 111, 255, 0.15);
+  background-color: #fff;
+}
+
+/* Input placeholder styling */
+.form-control::placeholder {
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.form-control:focus::placeholder {
+  color: #bbb;
+}
+
+/* ==========================
+   BADGE ANIMATIONS
+   ========================== */
+
+.badge {
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.badge-primary {
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(95, 111, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(95, 111, 255, 0.1);
+  }
+}
+
+/* ==========================
+   LINK & ANCHOR ANIMATIONS
+   ========================== */
+
+a, .nav-link {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #5F6FFF;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link.active::before {
+  width: 100%;
+}
+
+/* ==========================
+   GRADIENT ANIMATIONS
+   ========================== */
+
+/* Animated gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #5F6FFF 0%, #8B9FFF 100%);
+}
+
+.gradient-light {
+  background: linear-gradient(135deg, #F0F3FF 0%, #F8FAFF 100%);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #5F6FFF, #8B9FFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================
+   GLOW EFFECTS
+   ========================== */
+
+/* Soft glow on hover */
+.glow-on-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 20px rgba(95, 111, 255, 0.2);
+}
+
+/* Strong glow effect */
+.strong-glow:hover {
+  box-shadow: 0 0 30px rgba(95, 111, 255, 0.3),
+              0 0 15px rgba(95, 111, 255, 0.2);
+}
+
+/* Speciality card glow */
+.speciality-card {
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.speciality-card:hover {
+  box-shadow: 0 0 24px rgba(95, 111, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   TABLE ANIMATIONS
+   ========================== */
+
+/* Table row hover effect */
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9ff;
+  box-shadow: inset 0 0 0 1px rgba(95, 111, 255, 0.1);
+}
+
+/* ==========================
+   SCROLL ANIMATIONS
+   ========================== */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade in on scroll */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* ==========================
+   MODAL & POPOVER ANIMATIONS
+   ========================== */
+
+.modal.fade.show {
+  animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================
+   RESPONSIVE MICRO-INTERACTIONS
+   ========================== */
+
+@media (max-width: 768px) {
+  .card-hover:hover {
+    transform: translateY(-2px);
+  }
+
+  .doctor-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .btn-primary:hover,
+  .btn-outline-primary:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* ==========================
+   ACCESSIBILITY
+   ========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================
+   UTILITY CLASSES
+   ========================== */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-hand {
+  cursor: grab;
+}
+
+.cursor-hand:active {
+  cursor: grabbing;
+}
+
+.pointer-hand {
+  cursor: pointer;
+}
+
+.enhance-text {
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.text-uppercase-small {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ==========================
+   LOADING ANIMATIONS
+   ========================== */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.pulse-animate {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    #f0f0f0 8%,
+    #f9f9f9 18%,
+    #f0f0f0 33%
+  );
+  background-size: 800px 104px;
+}

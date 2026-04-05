@@ -1,0 +1,241 @@
+.doctor-schedule-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fcfd 0%, #f0f7fb 28%, #e6f2f9 52%, #ddf0f7 78%, #d9eef6 100%);
+  padding: 2rem 1.25rem;
+}
+
+.doctor-schedule-header h1 {
+  margin: 0;
+  color: #163f60;
+  font-size: 1.8rem;
+}
+
+.doctor-schedule-header p {
+  margin-top: 0.35rem;
+  color: #55728a;
+}
+
+.doctor-schedule-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(18, 53, 92, 0.1);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.doctor-schedule-card h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.05rem;
+  color: #163f60;
+}
+
+.doctor-schedule-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.65rem;
+}
+
+.doctor-schedule-day {
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: 1px solid #d9e8f4;
+}
+
+.doctor-schedule-day.allowed {
+  background: #eef9f6;
+  border-color: #9ad5c1;
+}
+
+.doctor-schedule-day.blocked {
+  background: #fff1f2;
+  border-color: #f9b8c0;
+}
+
+.doctor-schedule-day strong,
+.doctor-schedule-day span,
+.doctor-schedule-day small {
+  display: block;
+}
+
+.doctor-schedule-day span {
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: #5e7a90;
+}
+
+.doctor-schedule-day small {
+  margin-top: 0.3rem;
+  font-size: 0.74rem;
+}
+
+.doctor-schedule-tab-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.doctor-schedule-tab-header button {
+  border: 1px solid #c5dced;
+  border-radius: 8px;
+  padding: 0.48rem 0.9rem;
+  background: #fff;
+  color: #2d5675;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.doctor-schedule-tab-header button.active {
+  background: linear-gradient(135deg, #1f9dcb 0%, #2189f0 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.doctor-schedule-upload-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.65rem;
+}
+
+.doctor-schedule-upload-form label {
+  font-size: 0.82rem;
+  color: #264f6f;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.doctor-schedule-upload-form input,
+.doctor-schedule-upload-form select {
+  border: 1px solid #cfe0ee;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+}
+
+.doctor-schedule-upload-form button {
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  cursor: pointer;
+}
+
+.doctor-schedule-placeholder-slots {
+  grid-column: 1 / -1;
+  border: 1px dashed #b7d0e3;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #f8fcff;
+}
+
+.doctor-schedule-placeholder-slots h4 {
+  margin: 0 0 0.5rem;
+  color: #215073;
+  font-size: 0.92rem;
+}
+
+.doctor-schedule-placeholder-slots div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.doctor-schedule-placeholder-slots span {
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: #e6f2fb;
+  color: #2b5e81;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.doctor-schedule-table-wrap {
+  overflow-x: auto;
+}
+
+.doctor-schedule-edit-strip {
+  margin-top: 0.85rem;
+  border: 1px solid #d8e8f4;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #f8fcff;
+}
+
+.doctor-schedule-edit-strip h4 {
+  margin: 0 0 0.6rem;
+  color: #285173;
+  font-size: 0.92rem;
+}
+
+.doctor-schedule-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.65rem;
+}
+
+.doctor-schedule-edit-grid label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.79rem;
+  font-weight: 700;
+  color: #2a5272;
+}
+
+.doctor-schedule-edit-grid input,
+.doctor-schedule-edit-grid select {
+  width: 100%;
+  border: 1px solid #ccdfed;
+  border-radius: 8px;
+  padding: 0.48rem 0.6rem;
+}
+
+.doctor-schedule-edit-actions {
+  display: flex;
+  align-items: end;
+  gap: 0.45rem;
+}
+
+.doctor-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctor-schedule-table th,
+.doctor-schedule-table td {
+  padding: 0.65rem;
+  border-bottom: 1px solid #edf4fa;
+  text-align: left;
+  font-size: 0.84rem;
+}
+
+.doctor-schedule-table th {
+  background: #f5faff;
+  color: #2c5677;
+  font-weight: 700;
+}
+
+.doctor-schedule-empty-row {
+  text-align: center;
+  color: #6a879d;
+  font-weight: 600;
+  padding: 0.95rem;
+}
+
+.doctor-table-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.55rem;
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.doctor-table-btn.edit {
+  background: #2563eb;
+}
+
+.doctor-table-btn.cancel {
+  background: #ef4444;
+}

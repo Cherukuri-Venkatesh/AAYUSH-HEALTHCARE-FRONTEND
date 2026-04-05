@@ -1,0 +1,54 @@
+.doctor-patient-profile-page {
+  min-height: 100%;
+  background: linear-gradient(135deg, #f9fcfd 0%, #f0f7fb 28%, #e6f2f9 52%, #ddf0f7 78%, #d9eef6 100%);
+  padding: 2rem 1.35rem;
+}
+
+.doctor-patient-profile-card {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(18, 53, 92, 0.12);
+  padding: 1rem;
+}
+
+.doctor-patient-profile-header h1 {
+  margin: 0;
+  color: #173f5f;
+  font-size: 1.6rem;
+}
+
+.doctor-patient-profile-header p {
+  margin-top: 0.35rem;
+  color: #58768d;
+  font-size: 0.9rem;
+}
+
+.doctor-patient-basic-card,
+.doctor-patient-history-card {
+  margin-top: 1rem;
+}
+
+.doctor-patient-history-card h2 {
+  margin: 0 0 0.6rem;
+  color: #1e4a6b;
+  font-size: 1.05rem;
+}
+
+.doctor-patient-basic-table th,
+.doctor-patient-basic-table td,
+.doctor-patient-history-table th,
+.doctor-patient-history-table td {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .doctor-patient-profile-page {
+    padding: 1.35rem 0.85rem;
+  }
+
+  .doctor-patient-profile-header h1 {
+    font-size: 1.35rem;
+  }
+}

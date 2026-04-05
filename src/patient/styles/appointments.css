@@ -1,0 +1,264 @@
+/* ============================================
+   APPOINTMENTS PAGE STYLING
+   Enhanced Filters & Table Design
+   ============================================ */
+
+/* ============================================
+   APPOINTMENTS PAGE HEADER - WORLD CLASS
+   ============================================ */
+
+.appointments-header {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(95, 111, 255, 0.2);
+  margin-bottom: 2.5rem;
+  animation: fadeInDown 0.7s ease-out;
+}
+
+.appointments-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(32, 54, 158, 0.7) 0%, rgba(95, 111, 255, 0.7) 100%);
+  z-index: 1;
+}
+
+.appointments-header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: white;
+  min-height: 380px;
+}
+
+.appointments-header-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1.5px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.appointments-header-content p {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+  opacity: 0.95;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   FILTER SECTION - ENHANCED
+   ============================================ */
+
+.filter-section {
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.filter-section:hover {
+  box-shadow: 0 8px 16px rgba(95, 111, 255, 0.1) !important;
+}
+
+.btn-group .btn {
+  border-radius: 8px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-group .btn-primary {
+  background: linear-gradient(135deg, #5F6FFF, #8B9FFF) !important;
+  border-color: #5F6FFF !important;
+  box-shadow: 0 4px 12px rgba(95, 111, 255, 0.2);
+}
+
+.btn-group .btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-group .btn-outline-primary:hover {
+  background-color: #f8f9ff;
+  color: #5F6FFF;
+}
+
+/* Appointments Table */
+.appointment-table-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin: 0;
+}
+
+.appointment-table thead {
+  background: linear-gradient(135deg, #5F6FFF 0%, #8B9FFF 100%) !important;
+  color: white !important;
+}
+
+.appointment-table thead tr {
+  background: linear-gradient(135deg, #5F6FFF 0%, #8B9FFF 100%) !important;
+}
+
+.appointment-table th,
+.appointment-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.appointment-table th {
+  font-weight: 700;
+  color: white !important;
+  letter-spacing: 0.3px;
+  background: transparent !important;
+  padding: 1.2rem 1rem !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.appointment-table tbody tr {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.appointment-table tbody tr:hover {
+  background-color: #f8f9ff;
+  box-shadow: inset 0 0 0 1px rgba(95, 111, 255, 0.1);
+  transform: translateX(2px);
+}
+
+.appointment-table tbody tr:hover strong {
+  color: #5F6FFF;
+}
+
+/* Badge styling */
+.badge {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge.bg-primary {
+  background: linear-gradient(135deg, #5F6FFF, #8B9FFF) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #f5576c, #ff6b6b) !important;
+}
+
+/* Button styling */
+.btn-sm {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(95, 111, 255, 0.2);
+}
+
+.btn-danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-danger:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(245, 87, 108, 0.2);
+}
+
+.appointment-doctor-profile-card {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 12px;
+  border: 1px solid #e0e8ff;
+  background: linear-gradient(140deg, #f2f6ff 0%, #fbfcff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.appointment-doctor-profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #dbe5ff;
+  color: #3a52c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  box-shadow: 0 10px 22px rgba(95, 111, 255, 0.16);
+}
+
+.appointment-doctor-profile-tag {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #5f6fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appointment-doctor-profile-card {
+    min-height: 180px;
+  }
+
+  .appointment-table {
+    font-size: 0.9rem;
+  }
+
+  .appointment-table th,
+  .appointment-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .filter-section {
+    padding: 1rem !important;
+  }
+
+  .btn-group .btn {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.85rem;
+  }
+}
+

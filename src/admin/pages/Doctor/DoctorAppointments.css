@@ -1,0 +1,183 @@
+.doctor-appointments-page {
+  min-height: 100%;
+  background: linear-gradient(135deg, #f9fcfd 0%, #f0f7fb 28%, #e6f2f9 52%, #ddf0f7 78%, #d9eef6 100%);
+  padding: 2rem 1.35rem;
+}
+
+.doctor-appointments-title-block {
+  margin-bottom: 1rem;
+}
+
+.doctor-appointments-title-block h1 {
+  margin: 0;
+  font-size: 1.85rem;
+  color: #143c5d;
+  font-weight: 800;
+}
+
+.doctor-appointments-title-block p {
+  margin-top: 0.35rem;
+  color: #4d6d83;
+  font-size: 0.94rem;
+}
+
+.doctor-appointments-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(18, 53, 92, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.doctor-appointments-card h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.05rem;
+  color: #143c5d;
+}
+
+.doctor-calendar-scroll {
+  display: flex;
+  gap: 0.7rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+}
+
+.doctor-calendar-day {
+  min-width: 132px;
+  border: 1px solid #d8e8f4;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 0.7rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-calendar-day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(24, 67, 106, 0.1);
+}
+
+.doctor-calendar-day.active {
+  background: linear-gradient(135deg, #1f9dcb 0%, #2189f0 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.doctor-calendar-day strong,
+.doctor-calendar-day span,
+.doctor-calendar-day small {
+  display: block;
+}
+
+.doctor-calendar-day strong {
+  font-size: 0.88rem;
+}
+
+.doctor-calendar-day span {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+}
+
+.doctor-calendar-day small {
+  margin-top: 0.3rem;
+  font-size: 0.74rem;
+  opacity: 0.95;
+}
+
+.doctor-queue-table-wrap,
+.doctor-filter-scroll {
+  overflow-x: auto;
+}
+
+.doctor-queue-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctor-queue-table th,
+.doctor-queue-table td {
+  padding: 0.65rem;
+  border-bottom: 1px solid #edf4fa;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.doctor-queue-table th {
+  background: #f5faff;
+  color: #29587a;
+  font-weight: 700;
+}
+
+.doctor-filter-scroll {
+  display: flex;
+  gap: 0.55rem;
+  white-space: nowrap;
+  padding-bottom: 0.2rem;
+}
+
+.doctor-filter-btn {
+  border: 1px solid #c9dff0;
+  border-radius: 999px;
+  background: #fff;
+  color: #2d5878;
+  font-size: 0.83rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.doctor-filter-btn.active {
+  background: linear-gradient(135deg, #1f9dcb 0%, #2189f0 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.doctor-empty-row {
+  text-align: center;
+  color: #6b879d;
+  font-weight: 600;
+  padding: 0.95rem;
+}
+
+.doctor-reschedule-card {
+  border: 1px solid #d8e7f4;
+}
+
+.doctor-reschedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.doctor-reschedule-grid label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2b5373;
+}
+
+.doctor-reschedule-grid input {
+  width: 100%;
+  border: 1px solid #cfe0ee;
+  border-radius: 8px;
+  padding: 0.52rem 0.65rem;
+}
+
+.doctor-reschedule-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+}
+
+@media (max-width: 768px) {
+  .doctor-appointments-page {
+    padding: 1.35rem 0.85rem;
+  }
+
+  .doctor-appointments-title-block h1 {
+    font-size: 1.45rem;
+  }
+}

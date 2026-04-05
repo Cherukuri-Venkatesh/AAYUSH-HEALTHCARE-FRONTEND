@@ -1,0 +1,271 @@
+.doctor-analytics-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fcfd 0%, #f0f7fb 28%, #e6f2f9 52%, #ddf0f7 78%, #d9eef6 100%);
+  padding: 2rem 1.25rem;
+}
+
+.doctor-analytics-header h1 {
+  margin: 0;
+  color: #143c5d;
+  font-size: 1.8rem;
+}
+
+.doctor-analytics-header p {
+  margin-top: 0.35rem;
+  color: #506f85;
+}
+
+.doctor-analytics-kpi-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.doctor-analytics-kpi-card {
+  background: linear-gradient(135deg, #1f9dcb 0%, #2189f0 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.9rem;
+  box-shadow: 0 10px 22px rgba(28, 90, 145, 0.23);
+}
+
+.doctor-analytics-kpi-card h3 {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.doctor-analytics-kpi-card strong {
+  margin-top: 0.4rem;
+  display: block;
+  font-size: 1.35rem;
+}
+
+.doctor-analytics-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.75rem;
+}
+
+.doctor-analytics-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.9rem;
+  box-shadow: 0 10px 24px rgba(18, 53, 92, 0.1);
+}
+
+.doctor-analytics-block-wide {
+  grid-column: span 2;
+}
+
+.doctor-analytics-block h3,
+.doctor-analytics-heatmap-card h3 {
+  margin: 0 0 0.7rem;
+  color: #1f4768;
+  font-size: 1rem;
+}
+
+.doctor-analytics-pie-legend {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.doctor-analytics-pie-legend div {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.doctor-analytics-pie-legend span {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+}
+
+.doctor-analytics-pie-legend p {
+  margin: 0;
+  color: #466981;
+  font-size: 0.86rem;
+}
+
+.doctor-analytics-pie-legend strong {
+  color: #1f4768;
+  font-size: 0.86rem;
+}
+
+.doctor-analytics-bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.45rem;
+  align-items: end;
+}
+
+.doctor-analytics-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.32rem;
+}
+
+.doctor-analytics-bar-bg {
+  width: 18px;
+  height: 110px;
+  border-radius: 999px;
+  background: #e5f1f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-analytics-bar-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #34d399 0%, #1f9dcb 100%);
+}
+
+.doctor-analytics-bar-item span {
+  color: #5c7d95;
+  font-size: 0.74rem;
+}
+
+.doctor-disease-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 36px;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.45rem;
+}
+
+.doctor-disease-row p {
+  margin: 0;
+  color: #3a617d;
+  font-size: 0.84rem;
+}
+
+.doctor-disease-track {
+  width: 100%;
+  background: #edf4fa;
+  border-radius: 999px;
+  height: 7px;
+  overflow: hidden;
+}
+
+.doctor-disease-track span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22c55e 0%, #1f9dcb 100%);
+}
+
+.doctor-disease-row strong {
+  color: #204e70;
+  font-size: 0.82rem;
+}
+
+.doctor-outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.doctor-outcome-grid div {
+  border: 1px solid #e2edf6;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #f8fbff;
+}
+
+.doctor-outcome-grid p {
+  margin: 0;
+  color: #4e6d83;
+  font-size: 0.8rem;
+}
+
+.doctor-outcome-grid strong {
+  color: #1e4868;
+  font-size: 1rem;
+}
+
+.doctor-revenue-line {
+  width: 100%;
+  height: 115px;
+  background: linear-gradient(180deg, rgba(31, 157, 203, 0.08), rgba(31, 157, 203, 0));
+  border-radius: 8px;
+}
+
+.doctor-revenue-labels {
+  margin-top: 0.45rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 0.72rem;
+  color: #5b7c93;
+}
+
+.doctor-analytics-heatmap-card {
+  margin-top: 0.8rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(18, 53, 92, 0.1);
+  padding: 0.9rem;
+}
+
+.doctor-analytics-heatmap {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.doctor-analytics-heatmap-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.doctor-analytics-heatmap-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #486881;
+  font-weight: 600;
+}
+
+.doctor-analytics-heatmap-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.doctor-analytics-heat-row {
+  display: grid;
+  grid-template-columns: 48px repeat(5, 1fr);
+  gap: 0.4rem;
+}
+
+.doctor-analytics-heat-row span {
+  font-size: 0.8rem;
+  color: #4f6d83;
+  font-weight: 600;
+  align-self: center;
+}
+
+.doctor-analytics-heat-row i {
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.35rem 0.15rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .doctor-analytics-block-wide {
+    grid-column: span 1;
+  }
+}

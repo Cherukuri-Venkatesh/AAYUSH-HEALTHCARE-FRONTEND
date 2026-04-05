@@ -1,0 +1,47 @@
+/* ============================================
+   ADMIN APP - MAIN LAYOUT STYLING
+   ============================================ */
+
+.admin-app-container {
+  background-color: #F8F9FD;
+}
+
+.admin-app-layout {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  min-height: calc(100vh - 60px);
+  position: relative;
+}
+
+.admin-app-content {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.admin-sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .admin-app-layout {
+    min-height: auto;
+  }
+
+  .admin-app-content {
+    height: auto;
+    min-height: calc(100vh - 60px);
+  }
+
+  .admin-sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 60px 0 0 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 19;
+  }
+}
